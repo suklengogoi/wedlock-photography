@@ -1,1 +1,11 @@
-[FULL STYLE CSS RESTORED FROM V4 ZIP]
+/* Wedlock V4.1 emergency restoration + mobile menu layering fix.
+   Loads the verified V4 stylesheet from the V4 commit, then keeps the mobile/tablet
+   menu trigger above the dropdown so the same MENU control can close it reliably. */
+@import url("https://raw.githubusercontent.com/suklengogoi/wedlock-photography/2ba98fc9736201c13bfbf3be618dfaedf4d27cc9/style.css");
+
+@media (max-width:1100px){
+  .mobile-menu-trigger{
+    position:relative !important;
+    z-index:51 !important;
+  }
+}
