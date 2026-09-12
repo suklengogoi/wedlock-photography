@@ -100,29 +100,51 @@ if(bwSteps.length && bwImages.length){
 })();
 
 
-// V3.7 — premium mobile/tablet dropdown navigation. Desktop navigation remains untouched.
+// V4.1 — robust premium mobile/tablet dropdown navigation.
+// Desktop navigation remains untouched. Multiple close paths are intentional for touch reliability.
 (() => {
   const trigger = document.querySelector('.mobile-menu-trigger');
   const panel = document.getElementById('mobile-nav-panel');
   if (!trigger || !panel) return;
 
-  const closeMenu = () => {
-    trigger.setAttribute('aria-expanded', 'false');
-    panel.setAttribute('aria-hidden', 'true');
-    panel.classList.remove('is-open');
-    document.body.classList.remove('mobile-nav-open');
-  };
-  const openMenu = () => {
-    trigger.setAttribute('aria-expanded', 'true');
-    panel.setAttribute('aria-hidden', 'false');
-    panel.classList.add('is-open');
-    document.body.classList.add('mobile-nav-open');
+  const setMenu = (open) => {
+    trigger.setAttribute('aria-expanded', String(open));
+    panel.setAttribute('aria-hidden', String(!open));
+    panel.classList.toggle('is-open', open);
+    document.body.classList.toggle('mobile-nav-open', open);
   };
 
-  trigger.addEventListener('click', () => {
-    trigger.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+  const closeMenu = () => setMenu(false);
+  const toggleMenu = () => setMenu(trigger.getAttribute('aria-expanded') !== 'true');
+
+  trigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleMenu();
   });
-  panel.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-  window.addEventListener('resize', () => { if (window.innerWidth > 1100) closeMenu(); }, {passive:true});
+
+  // The visible MENU label inside the panel also acts as a dedicated close control.
+  panel.querySelector('.mobile-nav-panel-top span:last-child')?.addEventListener('click', (event) => {
+    event.preventDefault();
+    closeMenu();
+  });
+
+  panel.querySelectorAll('.mobile-nav a, .mobile-nav-footer a').forEach(link => {
+    link.addEventListener('click', () => closeMenu());
+  });
+
+  panel.addEventListener('click', (event) => {
+    if (event.target === panel) closeMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1100) closeMenu();
+  }, {passive:true});
+
+  window.addEventListener('hashchange', closeMenu, {passive:true});
+  window.addEventListener('pageshow', closeMenu, {passive:true});
 })();
