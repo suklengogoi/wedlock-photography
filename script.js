@@ -100,8 +100,7 @@ if(bwSteps.length && bwImages.length){
 })();
 
 
-// V4.1 — robust premium mobile/tablet dropdown navigation.
-// Desktop navigation remains untouched. Multiple close paths are intentional for touch reliability.
+// V4.2 — robust premium mobile/tablet dropdown navigation.
 (() => {
   const trigger = document.querySelector('.mobile-menu-trigger');
   const panel = document.getElementById('mobile-nav-panel');
@@ -123,14 +122,8 @@ if(bwSteps.length && bwImages.length){
     toggleMenu();
   });
 
-  // The visible MENU label inside the panel also acts as a dedicated close control.
-  panel.querySelector('.mobile-nav-panel-top span:last-child')?.addEventListener('click', (event) => {
-    event.preventDefault();
-    closeMenu();
-  });
-
   panel.querySelectorAll('.mobile-nav a, .mobile-nav-footer a').forEach(link => {
-    link.addEventListener('click', () => closeMenu());
+    link.addEventListener('click', closeMenu);
   });
 
   panel.addEventListener('click', (event) => {
@@ -146,5 +139,4 @@ if(bwSteps.length && bwImages.length){
   }, {passive:true});
 
   window.addEventListener('hashchange', closeMenu, {passive:true});
-  window.addEventListener('pageshow', closeMenu, {passive:true});
 })();
