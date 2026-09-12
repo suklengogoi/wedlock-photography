@@ -1,4 +1,3 @@
-
 :root{--ink:#171714;--paper:#f2eee6;--cream:#e8e0d1;--line:rgba(23,23,20,.18);--muted:#706c63;--gold:#a9844c;--white:#fbfaf6;--serif:"Cormorant Garamond",serif;--sans:"DM Sans",sans-serif;--display:"Italiana",serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}body.is-locked{overflow:hidden}img,video{display:block;width:100%}a{color:inherit;text-decoration:none}button{font:inherit}.grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .site-header{position:fixed;top:0;left:0;right:0;z-index:50;height:82px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,.36),transparent);transition:height .35s ease,background .35s ease,backdrop-filter .35s ease}.site-header.scrolled{height:68px;background:rgba(23,23,20,.94);backdrop-filter:blur(12px)}.brand{display:flex;align-items:center;gap:10px;letter-spacing:.16em}.brand strong{font-size:13px;font-weight:600;display:block}.brand small{display:block;font-size:7px;letter-spacing:.38em;margin-top:3px;opacity:.72}.brand-mark{font-family:var(--serif);font-size:35px;font-weight:500;line-height:1}.desktop-nav{display:flex;gap:34px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.desktop-nav a{opacity:.9;transition:opacity .2s,color .2s}.desktop-nav a:hover{opacity:1;color:#d8bb88}.nav-cta{border:1px solid rgba(255,255,255,.65);padding:10px 18px;border-radius:999px;font-size:10px;letter-spacing:.13em;text-transform:uppercase}
@@ -21,8 +20,8 @@
 .footer{background:#151513;color:#fff;border-top:1px solid rgba(255,255,255,.12);padding:48px 4vw 85px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px;align-items:end}.footer-brand{display:flex;align-items:center;gap:10px;width:max-content}.footer-brand strong{display:block;font-size:12px;letter-spacing:.18em}.footer-brand small{display:block;font-size:7px;letter-spacing:.35em;opacity:.5}.footer>p{font-family:var(--serif);font-size:23px;color:rgba(255,255,255,.7);margin:0}.footer-links{display:flex;justify-content:flex-end;gap:18px}.footer-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.copyright{grid-column:1/-1;color:rgba(255,255,255,.3);font-size:8px;margin-top:20px}.mobile-bar{display:none}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
 .lightbox,.film-modal{position:fixed;inset:0;z-index:120;background:rgba(9,9,8,.96);display:none;align-items:center;justify-content:center;padding:5vw}.lightbox.open,.film-modal.open{display:flex}.lightbox figure{margin:0;max-width:min(90vw,1250px);max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:12px}.lightbox figure img{width:auto;max-width:88vw;max-height:82vh;object-fit:contain}.lightbox figcaption{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.58)}.modal-close{position:absolute;right:22px;top:14px;background:none;border:0;color:#fff;font-size:42px;font-weight:200;cursor:pointer;z-index:3}.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;font-size:60px;font-weight:200;cursor:pointer;padding:20px}.lightbox-prev{left:18px}.lightbox-next{right:18px}.film-modal video{width:min(1200px,90vw);max-height:84vh;background:#000}
-@media(max-width:900px){.site-header{height:72px;padding:0 5vw}.site-header.scrolled{height:64px}.desktop-nav{display:none}.nav-cta{padding:9px 13px}.hero{min-height:680px}.hero-content{padding:0 6vw 15vh}.hero h1{font-size:18vw}.hero-copy{font-size:13px}.hero-bottom{left:6vw;right:6vw}.hero-bottom span:first-child{display:none}.section-pad{padding:90px 6vw}.intro-main,.two-col,.services,.signature-section,.film-section{grid-template-columns:1fr;gap:55px}.intro-kicker{margin-bottom:45px}.display{font-size:12vw}.intro-copy{max-width:620px}.stories-head,.section-head{display:block}.section-note{margin-top:25px}.editorial-stage{padding:34px 5vw 48px}.editorial-intro,.editorial-foot{font-size:7px}.editorial-wall{display:flex;flex-direction:column;gap:28px;margin:34px auto 38px;max-width:620px}.wall-card{width:100%;height:auto!important;margin:0!important}.card-a{aspect-ratio:4/5}.card-b{aspect-ratio:4/3}.card-c{aspect-ratio:4/5}.wall-card figcaption{font-size:6px;left:9px;right:9px;bottom:9px;gap:7px}.parallax-story{min-height:620px;height:78vh}.parallax-bg{inset:0;background-position:center 18%}.parallax-content{padding:0 6vw}.parallax-content h2{font-size:15vw}.film-section{padding:85px 6vw}.film-frame{order:-1}.film-copy h2{font-size:15vw}.sticky-title{position:relative;top:auto}.experience-list h3{font-size:30px}.gallery-track img{width:46vw;height:68vw}.gallery-track img:nth-child(even){height:54vw}.mosaic-section{padding:80px 5vw}.mosaic-intro{padding:0 1vw 45px}.mosaic-grid{grid-template-columns:1fr 1fr;grid-template-rows:48vw 65vw 48vw}.m1{grid-column:1;grid-row:1/3}.m2{grid-column:2;grid-row:1}.m3{grid-column:2;grid-row:2}.m4{grid-column:1;grid-row:3}.m5{grid-column:2;grid-row:3}.m6{display:none}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.gallery-item{aspect-ratio:3/4}.service-cards article{min-height:260px;padding:22px}.service-cards h3{font-size:29px;margin-top:40px}.signature-image{height:120vw}.signature-copy{padding:80px 6vw}.reviews-head{display:block}.reviews-head h2{margin-top:25px}.review-grid{grid-template-columns:1fr}.review-grid article{padding:30px;min-height:300px}.insta-head{display:block}.insta-head a{display:block;margin-top:15px}.insta-grid{display:flex;overflow:hidden;gap:7px}.insta-grid img{min-width:42vw;height:55vw}.contact{min-height:auto}.contact-inner{padding:100px 6vw 120px}.contact h2{font-size:18vw}.contact-actions{flex-wrap:wrap}.contact-details{display:grid;gap:15px}.footer{grid-template-columns:1fr;padding-bottom:100px}.footer-links{justify-content:flex-start;flex-wrap:wrap}.copyright{grid-column:auto}.mobile-bar{display:grid;position:fixed;z-index:90;bottom:0;left:0;right:0;background:#171714;color:#fff;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.15);padding-bottom:env(safe-area-inset-bottom)}.mobile-bar a{color:#fff;text-align:center;text-decoration:none;padding:15px 4px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.12)}.mobile-bar a:last-child{border:0}.lightbox figure img{max-width:86vw;max-height:74vh}.lightbox-prev,.lightbox-next{font-size:44px;padding:10px}.modal-close{font-size:38px;right:12px}.film-modal{padding:12vw 5vw}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gallery-track{animation:none}.parallax-bg{transform:none!important}.reveal{transition:none}.wall-card img,.gallery-item img,.mosaic-grid img{transition:none}}
+
+
 
 /* V2.2 — restrained homepage + fixed visual storytelling */
 .fixed-story{background:var(--ink);color:#fff;display:grid;grid-template-columns:1.05fr .95fr;min-height:260vh;position:relative}
@@ -51,19 +50,7 @@
 .insta-minimal-inner{max-width:1000px}
 .insta-minimal-inner h2{font-family:var(--serif);font-size:clamp(70px,9vw,140px);line-height:.78;font-weight:400;letter-spacing:-.055em;margin:28px 0 40px}
 .insta-minimal-inner>p:last-child{color:var(--muted);font-size:13px;margin-top:22px}
-@media(max-width:900px){
-  .fixed-story{display:block;min-height:unset}
-  .fixed-story-visual{position:sticky;top:0;height:58vh;min-height:430px;z-index:0}
-  .fixed-story-copy{padding:0 6vw 10vh;position:relative;z-index:1;background:var(--ink)}
-  .fixed-story-copy article{min-height:68vh;padding:12vh 0;justify-content:center}
-  .fixed-story-copy h2{font-size:15vw}
-  .bw-section{display:block;padding:95px 6vw 110px}
-  .bw-intro{position:relative;top:auto;padding:0;margin-bottom:75px}
-  .bw-intro h2{font-size:18vw}
-  .bw-column{gap:85px}
-  .bw-card.bw-tall,.bw-card.bw-wide{width:100%;margin:0}  .instagram-minimal{padding:95px 6vw}
-  .insta-minimal-inner h2{font-size:18vw}
-}
+
 /* Bloom-inspired constant-image scroll treatment: the photograph stays fixed while the story moves. */
 .fixed-story{display:block;min-height:280vh;position:relative;background:#111}
 .fixed-story-visual{position:sticky;top:0;height:100vh;min-height:680px;z-index:0}
@@ -74,13 +61,7 @@
 .fixed-story-copy article h2,.fixed-story-copy article p,.fixed-story-copy article>span,.fixed-story-copy article .underlined{position:relative;z-index:2}
 .fixed-story-copy article h2{ text-shadow:0 2px 25px rgba(0,0,0,.28)}
 .fixed-story-label{z-index:3}
-@media(max-width:900px){
- .fixed-story{min-height:unset}
- .fixed-story-visual{height:62vh;min-height:460px}
- .fixed-story-copy{margin-top:-1px;padding:0 6vw 8vh;background:var(--ink)}
- .fixed-story-copy article{max-width:none;min-height:66vh;padding:12vh 0;}
- .fixed-story-copy h2{font-size:15vw}
-}
+
 
 /* V2.4 — scroll-driven selected stories */
 .story-sequence{position:relative;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(360px,.75fr);min-height:500vh;background:#151513;color:#fff}
@@ -105,16 +86,7 @@
 .story-step p{font-size:13px;line-height:1.9;color:rgba(255,255,255,.62);max-width:400px;margin:0}
 .story-step .underlined{margin-top:34px;color:#fff}
 
-@media(max-width:900px){
-  .story-sequence{display:block;min-height:auto;background:#151513}
-  .story-visual{height:62svh;min-height:440px;position:sticky;top:0;z-index:1}
-  .story-visual-meta{left:6vw;right:6vw;bottom:20px}
-  .story-steps{position:relative;z-index:2}
-  .story-step{min-height:72svh;padding:12vh 6vw;opacity:.38;border-top:1px solid rgba(255,255,255,.1)}
-  .story-step:first-child{border-top:0}
-  .story-step-inner>span{margin-bottom:25px}
-  .story-step h3{font-size:14vw}
-}
+
 
 /* V2.4 FIX 2 — portrait-safe selected stories.
    The source photographs are portrait-oriented. Do not crop them into the
@@ -126,11 +98,7 @@
 .story-image img{width:100%;height:100%;object-fit:contain;object-position:center center;transform:none!important;background:#111}
 .story-image-b img,.story-image-d img{object-position:center center}
 
-@media(max-width:900px){
-  .story-sequence{display:block}
-  .story-visual{height:62svh;min-height:440px}
-  .story-image img{object-fit:contain}
-}
+
 
 /* V2.4 refinement — full-bleed editorial scroll experience */
 .experience-scroll{position:relative;display:block;min-height:500vh;background:#111;color:#fff;overflow:clip}
@@ -150,17 +118,7 @@
 .experience-scroll-copy article h3{font-family:var(--serif);font-size:clamp(48px,5vw,78px);line-height:.87;font-weight:400;letter-spacing:-.04em;margin:30px 0;text-shadow:0 2px 28px rgba(0,0,0,.3)}
 .experience-scroll-copy article h3 em{font-style:italic}
 .experience-scroll-copy article p{max-width:440px;color:rgba(255,255,255,.78);font-size:13px;line-height:1.9;margin:0;text-shadow:0 1px 14px rgba(0,0,0,.35)}
-@media(max-width:900px){
- .experience-scroll{min-height:unset}
- .experience-scroll-visual{height:62svh;min-height:440px;position:sticky}
- .experience-scroll-image{background-position:center center}
- .experience-scroll-copy{margin-top:-62svh;padding:0 6vw 8vh}
- .experience-scroll-intro,.experience-scroll-copy article{width:min(560px,100%);margin-left:auto}
- .experience-scroll-intro{min-height:72svh;padding:12vh 0 10vh}
- .experience-scroll-intro h2{font-size:15vw}
- .experience-scroll-copy article{min-height:72svh;padding:12vh 0}
- .experience-scroll-copy article h3{font-size:14vw}
-}
+
 
 /* V2.4 — Black & White as a natural editorial chapter. One image stays present while the categories move through it. */
 .bw-story{position:relative;display:block;min-height:400vh;background:#10100f;color:#fff;overflow:clip}
@@ -179,26 +137,21 @@
 .bw-story-step h2{font-family:var(--serif);font-size:clamp(58px,7vw,112px);line-height:.82;font-weight:400;letter-spacing:-.05em;margin:0 0 30px;text-shadow:0 2px 28px rgba(0,0,0,.35)}
 .bw-story-step h2 em{font-style:italic}
 .bw-story-step p{max-width:420px;color:rgba(255,255,255,.78);font-size:13px;line-height:1.9;margin:0;text-shadow:0 1px 14px rgba(0,0,0,.3)}
-@media(max-width:900px){
- .bw-story{min-height:unset}
- .bw-story-visual{height:68svh;min-height:460px}
- .bw-story-copy{margin-top:-68svh;padding:0 6vw 8vh;background:transparent}
- .bw-story-step{min-height:82svh;align-items:flex-end;padding-bottom:9vh}
- .bw-story-step>div{max-width:100%}
- .bw-story-step h2{font-size:15vw}
- .bw-story-overlay{background:linear-gradient(0deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.18) 62%,rgba(0,0,0,.02) 100%)}
- .bw-story-meta{left:6vw;right:6vw;bottom:20px}
-}
+
 
 /* V2.4 B&W subject framing corrections — applied to the supplied editorial version */
 .bw-story-image-b img{object-position:center bottom}
 .bw-story-image-d img{object-position:center 36%;transform:scale(.82)}
 .bw-story-image-d.is-active img{transform:scale(.82)}
-@media (max-width:760px){
-  .bw-story-image-b img{object-position:center bottom}
-  .bw-story-image-d img{object-position:center 32%;transform:scale(.9)}
-  .bw-story-image-d.is-active img{transform:scale(.9)}
-}
+
+
+
+/* V3.2 — quiet chapter transition between the cinematic hero and Approach. */
+.chapter-transition{background:var(--paper);color:var(--ink);padding:clamp(34px,4vw,58px) 6vw;position:relative;z-index:5}
+.chapter-transition-inner{max-width:1500px;margin:0 auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.chapter-transition-inner span:first-child{color:var(--gold)}
+.chapter-transition-inner span:last-child{letter-spacing:.12em}
+
 
 /* V2.5 — editorial approach chapter */
 .approach-editorial{padding:clamp(72px,8vw,125px) 6vw clamp(88px,10vw,150px);background:var(--paper);overflow:hidden}
@@ -214,19 +167,7 @@
 .approach-editorial-image img{width:100%;height:100%;object-fit:cover;object-position:center 48%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .approach-editorial-image:hover img{transform:scale(1.018)}
 .approach-editorial-image figcaption{position:absolute;left:18px;right:18px;bottom:18px;display:flex;justify-content:space-between;gap:15px;color:#fff;font-size:8px;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 2px 18px rgba(0,0,0,.55)}
-@media(max-width:900px){
- .approach-editorial{padding:78px 6vw 90px}
- .approach-editorial-top{font-size:7px;align-items:flex-start}
- .approach-editorial-top span:last-child{display:none}
- .approach-editorial-grid{grid-template-columns:1fr;gap:45px}
- .approach-editorial-copy{padding:15px 0 0}
- .approach-number{margin-bottom:30px}
- .approach-editorial .display{font-size:12vw}
- .approach-editorial-bottom{grid-template-columns:1fr;gap:18px;margin-top:55px}
- .approach-editorial-bottom .underlined{grid-column:auto}
- .approach-editorial-image{min-height:118vw;max-height:none;order:2}
- .approach-editorial-image figcaption{left:10px;right:10px;bottom:10px;font-size:6px}
-}
+
 
 /* V2.5 refinement — full-bleed Approach chapter. The supplied night-sky photograph
    becomes the fixed visual while the editorial story scrolls over it. */
@@ -242,14 +183,7 @@
 .approach-scroll-copy h2 em,.approach-scroll-copy h3 em{font-style:italic}
 .approach-scroll-copy p{max-width:450px;color:rgba(255,255,255,.8);font-size:13px;line-height:1.9;margin:0}
 .approach-scroll-copy .underlined{color:#fff;margin-top:34px;width:max-content}
-@media(max-width:900px){
- .approach-scroll{min-height:unset}
- .approach-scroll-visual{height:62svh;min-height:460px}
- .approach-scroll-image{background-position:center center}
- .approach-scroll-copy{margin-top:-1px;padding:0 6vw 8vh;background:#111}
- .approach-scroll-copy article{width:100%;min-height:72svh;padding:12vh 0}
- .approach-scroll-copy h2,.approach-scroll-copy h3{font-size:15vw}
-}
+
 
 
 /* V2.6 — What We Create becomes a fourth editorial image story. Each service gets one considered photograph; the image stays full-bleed while the chapter scrolls. */
@@ -274,16 +208,7 @@
 .services-story-text h2 em{font-style:italic}
 .services-story-text p{max-width:460px;color:rgba(255,255,255,.8);font-size:13px;line-height:1.9;margin:0}
 .services-story-text .underlined{color:#fff;margin-top:34px;width:max-content}
-@media(max-width:900px){
- .services-story{min-height:unset}
- .services-story-visual{height:68svh;min-height:460px}
- .services-story-copy{margin-top:-68svh;padding:0 6vw 8vh}
- .services-story-step{min-height:82svh;align-items:flex-end;padding-bottom:9vh}
- .services-story-text{max-width:100%}
- .services-story-text h2{font-size:15vw}
- .services-story-overlay{background:linear-gradient(0deg,rgba(0,0,0,.76) 0%,rgba(0,0,0,.24) 62%,rgba(0,0,0,.03) 100%)}
- .services-story-meta{left:6vw;right:6vw;bottom:20px}
-}
+
 
 /* V2.6b — compact What We Create: one considered photograph, four services, one viewport. */
 .services-story{position:relative;min-height:clamp(720px,92vh,900px);height:min(92vh,900px);background:#111;color:#fff;overflow:hidden}
@@ -305,20 +230,7 @@
 .services-story-item p{max-width:520px;color:rgba(255,255,255,.73);font-size:11px;line-height:1.65;margin:0}
 .services-story-arrow{font-size:15px;color:rgba(255,255,255,.75);padding-top:5px;transition:transform .35s ease}
 .services-story-item:hover .services-story-arrow{transform:translate(3px,-3px)}
-@media(max-width:900px){
- .services-story{height:auto;min-height:820px}
- .services-story-visual{position:absolute}
- .services-story-inner{height:auto;min-height:820px;display:block;padding:105px 6vw 95px}
- .services-story-heading{max-width:620px;margin-bottom:45px}
- .services-story-heading h2{font-size:15vw;margin-bottom:22px}
- .services-story-heading p{font-size:12px}
- .services-story-list{margin-top:15px}
- .services-story-item{grid-template-columns:30px 1fr 20px;gap:10px;padding:18px 0}
- .services-story-item:hover{padding-left:0;padding-right:0;background:transparent}
- .services-story-item h3{font-size:28px}
- .services-story-item p{font-size:10px;line-height:1.55}
- .services-story-meta{left:6vw;right:6vw;bottom:20px}
-}
+
 
 
 /* V2.8 — signature chapter: one full-bleed photograph, compact editorial treatment. */
@@ -344,15 +256,321 @@
 .footer-socials span{font-size:8px;letter-spacing:.12em;text-transform:uppercase}
 .footer-socials .footer-whatsapp{padding-right:15px;border-color:rgba(255,255,255,.34);color:#fff}
 .footer-socials .footer-whatsapp svg{fill:currentColor;stroke:none}
-@media(max-width:900px){
- .signature-editorial{height:82svh;min-height:600px}
- .signature-editorial-bg img{object-position:center 50%}
- .signature-editorial-meta{left:6vw;right:6vw;top:20px;font-size:7px}
- .signature-editorial-copy{left:6vw;right:6vw;bottom:9vh;max-width:none}
- .signature-editorial-copy h2{font-size:15vw;margin-bottom:24px}
- .signature-editorial-copy>p:not(.eyebrow){font-size:12px;line-height:1.7}
- .signature-editorial-scroll{left:6vw;right:auto;bottom:20px;font-size:7px}
- .footer-socials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
- .footer-socials a{justify-content:flex-start;min-height:48px}
- .footer-socials .footer-whatsapp{grid-column:1/-1}
+
+
+/* V2.9 — unified final chapter: Instagram + enquiry */
+.closing-editorial{position:relative;min-height:92vh;display:flex;align-items:stretch;overflow:hidden;background:#11110f;color:#fff}
+.closing-editorial-bg{position:absolute;inset:0;z-index:0}
+.closing-editorial-bg img{width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:saturate(.78) contrast(.98)}
+.closing-editorial-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,10,9,.9) 0%,rgba(10,10,9,.68) 42%,rgba(10,10,9,.52) 68%,rgba(10,10,9,.78) 100%)}
+.closing-editorial-meta{position:absolute;z-index:3;top:28px;left:4vw;right:4vw;display:flex;justify-content:space-between;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.closing-editorial-inner{position:relative;z-index:3;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;padding:12vh 7vw 10vh}
+.closing-editorial-follow{max-width:570px;align-self:center}
+.closing-editorial-follow h2{font-family:var(--serif);font-size:clamp(62px,7.4vw,116px);line-height:.78;font-weight:400;letter-spacing:-.055em;margin:24px 0 30px}
+.closing-editorial-follow>p:not(.eyebrow),.closing-editorial-enquire>p:not(.eyebrow){max-width:440px;color:rgba(255,255,255,.7);font-size:13px;line-height:1.8}
+.closing-editorial-enquire{max-width:590px;padding:42px 0 0 7vw;border-left:1px solid rgba(255,255,255,.25)}
+.closing-editorial-enquire h3{font-family:var(--serif);font-size:clamp(72px,8.8vw,140px);line-height:.76;font-weight:400;letter-spacing:-.06em;margin:22px 0 34px}
+.closing-actions{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 42px}
+.button-outline-light,.button-ghost-light{color:#fff!important;border-color:rgba(255,255,255,.45)!important;background:transparent}
+.button-outline-light:hover,.button-ghost-light:hover{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.75)!important}
+.closing-details{display:flex;flex-wrap:wrap;gap:14px 25px}
+.closing-details a{color:rgba(255,255,255,.58);text-decoration:none;font-size:8px;letter-spacing:.13em;text-transform:uppercase}
+.closing-details a:hover{color:#fff}
+.closing-editorial-scroll{position:absolute;z-index:3;right:4vw;bottom:28px;font-size:8px;letter-spacing:.18em;color:rgba(255,255,255,.65)}
+.closing-editorial-scroll span{margin-left:8px}
+
+
+/* V3 — production polish: tighter pacing, cleaner hierarchy, tablet-safe layout. */
+/* The visual language stays unchanged; this pass edits rhythm rather than adding sections. */
+
+
+/* Tablet: keep the editorial composition, but give the two-column chapters more breathing room. */
+
+
+/* Mobile: preserve the photography-first feel while removing unnecessary vertical drag. */
+
+
+/* V3.0 final pacing calibration — each chapter still has room to breathe, but the site no longer feels endless. */
+
+
+
+
+
+/* V3.1 — final mobile pacing: shorter chapters, same photography-first composition. */
+
+
+
+/* V3.6 — mobile/tablet visual layering repair.
+   IMPORTANT: Desktop (>1100px) is intentionally untouched.
+   On smaller screens, the image layer stays sticky for the full chapter while
+   the editorial copy scrolls over it. The selected-stories images still change
+   through the existing IntersectionObserver; only their mobile composition changes. */
+
+
+
+
+
+
+/* V3.7 — premium mobile/tablet navigation. Desktop remains unchanged. */
+.mobile-menu-trigger,.mobile-nav-panel{display:none}
+
+
+/* ================================================================
+   V4 — RESPONSIVE SYSTEM CLEANUP
+   Desktop (>1100px) remains visually unchanged.
+   Responsive rules are consolidated by breakpoint to avoid cascade bugs.
+   ================================================================ */
+
+/* Desktop-only pacing: final V3 desktop values, consolidated. */
+@media (min-width:1101px){
+  .approach-scroll{min-height:220vh}
+  .approach-scroll-copy{padding-bottom:5vh}
+  .approach-scroll-copy article{min-height:55vh;padding:6vh 0}
+  .story-sequence{min-height:300vh}
+  .story-step{min-height:60vh;padding-top:6vh;padding-bottom:6vh}
+  .experience-scroll{min-height:270vh}
+  .experience-scroll-copy{padding-bottom:5vh}
+  .experience-scroll-intro{min-height:58vh;padding:6vh 0 5vh}
+  .experience-scroll-copy article{min-height:53vh;padding:6vh 0}
+  .fixed-story{min-height:180vh}
+  .fixed-story-copy{padding-bottom:5vh}
+  .fixed-story-copy article{min-height:45vh;padding:6vh 0}
+  .bw-story{min-height:240vh}
+  .bw-story-copy{padding-bottom:5vh}
+  .bw-story-step{min-height:60vh}
+  .services-story{height:min(90vh,900px);min-height:700px}
+  .signature-editorial{height:min(88vh,900px);min-height:650px}
+  .closing-editorial{min-height:88vh}
+}
+
+/* Tablet: 901–1100px. Mobile navigation is intentional at this breakpoint. */
+@media (min-width:901px) and (max-width:1100px){
+  .site-header{height:76px;padding:0 3.5vw}
+  .desktop-nav,.nav-cta{display:none}
+  .hero-content{padding-left:6vw;padding-bottom:10vh}
+
+  .approach-scroll{min-height:220vh;overflow:visible}
+  .approach-scroll-visual{position:sticky;top:0;height:100svh;min-height:0;overflow:hidden;z-index:0}
+  .approach-scroll-image{background-position:34% center}
+  .approach-scroll-copy{position:relative;z-index:2;margin-top:-100svh;padding:0 5vw 8vh;background:transparent;pointer-events:none}
+  .approach-scroll-copy article{width:100%;min-height:60vh;padding:7vh 0;background:transparent!important;pointer-events:auto}
+  .approach-scroll-copy h2,.approach-scroll-copy h3{font-size:clamp(52px,6vw,78px)}
+
+  .story-sequence{display:block;min-height:330vh;overflow:visible}
+  .story-visual{position:sticky;top:0;height:100svh;min-height:0;z-index:0}
+  .story-image img{object-fit:contain}
+  .story-steps{position:relative;z-index:2;margin-top:-100svh;background:transparent;pointer-events:none}
+  .story-step{min-height:66vh;padding:7vh 5vw;background:transparent;pointer-events:none}
+  .story-step-inner{pointer-events:auto}
+  .story-step h3{font-size:clamp(46px,5vw,68px)}
+
+  .experience-scroll{min-height:300vh;overflow:visible}
+  .experience-scroll-visual{position:sticky;top:0;height:100svh;min-height:0}
+  .experience-scroll-copy{position:relative;z-index:2;margin-top:-100svh;padding:0 5vw 8vh;background:transparent;pointer-events:none}
+  .experience-scroll-intro,.experience-scroll-copy article{width:100%;margin-left:0;background:transparent;pointer-events:auto}
+  .experience-scroll-intro{min-height:60vh;padding:7vh 0 5vh}
+  .experience-scroll-copy article{min-height:60vh;padding:7vh 0}
+  .experience-scroll-intro h2{font-size:clamp(56px,6.2vw,84px)}
+  .experience-scroll-copy article h3{font-size:clamp(44px,4.7vw,66px)}
+
+  .fixed-story{display:block;min-height:190vh;overflow:visible}
+  .fixed-story-visual{position:sticky;top:0;height:100svh;min-height:0;z-index:0;overflow:hidden}
+  .fixed-story-copy{position:relative;z-index:2;margin-top:-100svh;padding:0 5vw 8vh;background:transparent;pointer-events:none}
+  .fixed-story-copy article{max-width:470px;min-height:48vh;padding:7vh 0;background:transparent;pointer-events:auto}
+
+  .bw-story{min-height:250vh;overflow:clip}
+  .bw-story-visual{height:100svh;min-height:0}
+  .bw-story-copy{margin-top:-100vh;padding:0 5vw 5vh;background:transparent}
+  .bw-story-step{min-height:66vh}
+  .bw-story-step h2{font-size:clamp(52px,6.3vw,86px)}
+
+  .services-story{height:88vh;min-height:680px}
+  .services-story-inner{grid-template-columns:minmax(250px,.8fr) minmax(430px,1.2fr);gap:4vw;padding:95px 5vw 75px}
+  .services-story-heading h2{font-size:clamp(58px,6.4vw,84px)}
+  .services-story-item{padding:19px 0}
+  .services-story-item h3{font-size:clamp(25px,2.6vw,34px)}
+
+  .signature-editorial{height:84vh;min-height:620px}
+  .signature-editorial-copy{left:5vw}
+  .closing-editorial{min-height:84vh}
+  .closing-editorial-inner{padding-left:5vw;padding-right:5vw;gap:5vw}
+  .closing-editorial-follow h2{font-size:clamp(58px,6.8vw,88px)}
+  .closing-editorial-enquire{padding-left:5vw}
+  .closing-editorial-enquire h3{font-size:clamp(64px,8vw,105px)}
+
+  .mobile-menu-trigger{display:inline-flex}
+  .mobile-nav-panel{display:block}
+  .mobile-bar{display:none}
+}
+
+/* Mobile: <=900px. One consolidated rule set for the entire phone layout. */
+@media (max-width:900px){
+  .site-header{height:72px;padding:0 5vw}
+  .site-header.scrolled{height:64px}
+  .desktop-nav,.nav-cta{display:none}
+  .mobile-menu-trigger{display:inline-flex;align-items:center;gap:10px;min-height:40px;padding:9px 13px 9px 15px;border:1px solid rgba(255,255,255,.48);border-radius:999px;background:rgba(18,18,16,.18);color:#fff;font:500 9px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .25s ease,border-color .25s ease}
+  .mobile-menu-trigger:active{transform:translateY(1px)}
+  .mobile-menu-label{padding-top:1px}
+  .mobile-menu-icon{display:grid;gap:4px;width:13px}
+  .mobile-menu-icon i{display:block;width:13px;height:1px;background:currentColor;transition:transform .3s ease,opacity .2s ease}
+  .mobile-menu-trigger[aria-expanded="true"]{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.72)}
+  .mobile-menu-trigger[aria-expanded="true"] .mobile-menu-icon i:first-child{transform:translateY(2.5px) rotate(45deg)}
+  .mobile-menu-trigger[aria-expanded="true"] .mobile-menu-icon i:last-child{transform:translateY(-2.5px) rotate(-45deg)}
+
+  .mobile-nav-panel{position:fixed;z-index:49;top:0;left:0;right:0;display:block;visibility:hidden;opacity:0;pointer-events:none;background:rgba(20,20,18,.97);border-bottom:1px solid rgba(255,255,255,.13);transform:translateY(-12px);transition:opacity .3s ease,transform .35s cubic-bezier(.22,.61,.36,1),visibility 0s linear .35s;box-shadow:0 18px 50px rgba(0,0,0,.32)}
+  .mobile-nav-panel::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.035),transparent 38%)}
+  .mobile-nav-panel.is-open{visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0);transition-delay:0s}
+  .mobile-nav-panel-inner{padding:92px 6vw 26px;max-height:100svh;overflow:auto;-webkit-overflow-scrolling:touch}
+  .mobile-nav-panel-top{display:flex;justify-content:space-between;gap:20px;padding-bottom:17px;border-bottom:1px solid rgba(255,255,255,.13);color:rgba(255,255,255,.42);font:500 7px/1.2 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+  .mobile-nav{display:block}
+  .mobile-nav a{display:grid;grid-template-columns:32px 1fr 18px;align-items:center;gap:8px;min-height:59px;border-bottom:1px solid rgba(255,255,255,.1);color:#fff;text-decoration:none}
+  .mobile-nav a span{color:rgba(255,255,255,.34);font:500 7px/1 var(--sans);letter-spacing:.14em}
+  .mobile-nav a strong{font:400 clamp(24px,6vw,31px)/1.02 var(--serif);letter-spacing:-.015em}
+  .mobile-nav a em{justify-self:end;color:rgba(255,255,255,.55);font:400 17px/1 var(--sans);font-style:normal;transition:transform .25s ease,color .25s ease}
+  .mobile-nav a:active{opacity:.72}
+  .mobile-nav a:active em{transform:translate(2px,-2px);color:#d8bb88}
+  .mobile-nav-footer{display:flex;justify-content:space-between;gap:18px;padding-top:22px}
+  .mobile-nav-footer a{color:rgba(255,255,255,.66);text-decoration:none;font:500 8px/1.3 var(--sans);letter-spacing:.13em;text-transform:uppercase}
+  body.mobile-nav-open{overflow:hidden}
+
+  .hero{min-height:100svh}
+  .hero-content{padding:0 6vw 15vh}
+  .hero h1{font-size:18vw}
+  .hero-copy{font-size:13px}
+  .hero-bottom{left:6vw;right:6vw}
+  .hero-bottom span:first-child{display:none}
+
+  .section-pad{padding:90px 6vw}
+  .intro-main,.two-col,.services,.signature-section,.film-section{grid-template-columns:1fr;gap:55px}
+  .intro-kicker{margin-bottom:45px}
+  .display{font-size:12vw}
+  .stories-head,.section-head{display:block}
+  .section-note{margin-top:25px}
+  .parallax-story{min-height:620px;height:78vh}
+  .parallax-bg{inset:0;background-position:center 18%}
+  .parallax-content{padding:0 6vw}
+  .parallax-content h2{font-size:15vw}
+  .film-section{padding:85px 6vw}
+  .film-frame{order:-1}
+  .film-copy h2{font-size:15vw}
+  .sticky-title{position:relative;top:auto}
+  .experience-list h3{font-size:30px}
+  .gallery-track img{width:46vw;height:68vw}
+  .gallery-track img:nth-child(even){height:54vw}
+  .footer{grid-template-columns:1fr;padding-bottom:100px}
+  .footer-links{justify-content:flex-start;flex-wrap:wrap}
+  .copyright{grid-column:auto}
+  .footer-socials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .footer-socials a{justify-content:flex-start;min-height:48px}
+  .footer-socials .footer-whatsapp{grid-column:1/-1}
+  .lightbox figure img{max-width:86vw;max-height:74vh}
+  .lightbox-prev,.lightbox-next{font-size:44px;padding:10px}
+  .modal-close{font-size:38px;right:12px}
+  .film-modal{padding:12vw 5vw}
+
+  .chapter-transition{padding:24px 6vw}
+  .chapter-transition-inner{padding:14px 0;font-size:8px}
+  .chapter-transition-inner span:last-child{display:none}
+
+  /* Approach — one continuous photograph behind the full mobile story. */
+  .approach-scroll{position:relative;min-height:220vh;overflow:visible;background:#111}
+  .approach-scroll-visual{position:sticky;top:0;height:100svh;min-height:0;overflow:hidden;z-index:0;background:#111}
+  .approach-scroll-image{inset:0;background-size:cover;background-position:30% center;transform:scale(1.01)}
+  .approach-scroll-copy{position:relative;z-index:2;margin-top:-100svh;padding:0 6vw 8vh;background:transparent;pointer-events:none}
+  .approach-scroll-copy article{width:100%;min-height:55svh;padding:8vh 0;background:transparent!important;pointer-events:auto}
+  .approach-scroll-copy h2,.approach-scroll-copy h3{font-size:14vw}
+
+  /* Selected Stories — active photographs continue behind the story copy. */
+  .story-sequence{display:block;position:relative;min-height:300vh;overflow:visible;background:#151513}
+  .story-visual{position:sticky;top:0;height:100svh;min-height:0;z-index:0;background:#111}
+  .story-image img{object-fit:contain}
+  .story-steps{position:relative;z-index:2;margin-top:-100svh;background:transparent;pointer-events:none}
+  .story-step{min-height:60svh;padding:8vh 6vw;background:transparent;pointer-events:none}
+  .story-step:first-child{border-top:0}
+  .story-step-inner{pointer-events:auto;text-shadow:0 2px 24px rgba(0,0,0,.38)}
+  .story-step-inner>span{margin-bottom:25px}
+  .story-step h3{font-size:13vw}
+
+  /* Experience — constant background image, scrolling copy. */
+  .experience-scroll{position:relative;min-height:275vh;overflow:visible;background:#111}
+  .experience-scroll-visual{position:sticky;top:0;height:100svh;min-height:0;z-index:0}
+  .experience-scroll-image{background-position:center center}
+  .experience-scroll-copy{position:relative;z-index:2;margin-top:-100svh;padding:0 6vw 8vh;background:transparent;pointer-events:none}
+  .experience-scroll-intro,.experience-scroll-copy article{width:100%;margin-left:0;background:transparent;pointer-events:auto}
+  .experience-scroll-intro{min-height:55svh;padding:8vh 0 6vh}
+  .experience-scroll-intro h2{font-size:14vw}
+  .experience-scroll-copy article{min-height:55svh;padding:8vh 0}
+  .experience-scroll-copy article h3{font-size:13vw}
+
+  /* Fixed Story — same constant-image treatment. */
+  .fixed-story{display:block;position:relative;min-height:190vh;overflow:visible;background:#111}
+  .fixed-story-visual{position:sticky;top:0;height:100svh;min-height:0;z-index:0;overflow:hidden;background:#111}
+  .fixed-story-copy{position:relative;z-index:2;margin-top:-100svh;padding:0 6vw 8vh;background:transparent;pointer-events:none}
+  .fixed-story-copy article{min-height:48svh;padding:8vh 0;background:transparent;pointer-events:auto;text-shadow:0 2px 24px rgba(0,0,0,.38)}
+  .fixed-story-copy h2{font-size:14vw}
+
+  /* B&W — image remains full-bleed while text changes. */
+  .bw-story{min-height:240vh;overflow:clip}
+  .bw-story-visual{height:100svh;min-height:0}
+  .bw-story-copy{margin-top:-100vh;padding:0 6vw 5vh;background:transparent}
+  .bw-story-step{min-height:60svh;align-items:flex-end;padding-bottom:7vh}
+  .bw-story-step>div{max-width:100%}
+  .bw-story-step h2{font-size:14vw}
+  .bw-story-overlay{background:linear-gradient(0deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.18) 62%,rgba(0,0,0,.02) 100%)}
+  .bw-story-meta{left:6vw;right:6vw;bottom:20px}
+
+  .services-story{height:auto;min-height:760px}
+  .services-story-visual{position:absolute}
+  .services-story-inner{height:auto;min-height:760px;display:block;padding:95px 6vw 85px}
+  .services-story-heading{max-width:620px;margin-bottom:34px}
+  .services-story-heading h2{font-size:14vw;margin-bottom:22px}
+  .services-story-heading p{font-size:12px}
+  .services-story-list{margin-top:15px}
+  .services-story-item{grid-template-columns:30px 1fr 20px;gap:10px;padding:15px 0}
+  .services-story-item:hover{padding-left:0;padding-right:0;background:transparent}
+  .services-story-item h3{font-size:26px}
+  .services-story-item p{font-size:10px;line-height:1.55}
+  .services-story-meta{left:6vw;right:6vw;bottom:20px}
+
+  .signature-editorial{height:78svh;min-height:560px}
+  .signature-editorial-bg img{object-position:center 50%}
+  .signature-editorial-meta{left:6vw;right:6vw;top:20px;font-size:7px}
+  .signature-editorial-copy{left:6vw;right:6vw;bottom:9vh;max-width:none}
+  .signature-editorial-copy h2{font-size:15vw;margin-bottom:24px}
+  .signature-editorial-copy>p:not(.eyebrow){font-size:12px;line-height:1.7}
+  .signature-editorial-scroll{left:6vw;right:auto;bottom:20px;font-size:7px}
+
+  .closing-editorial{min-height:auto}
+  .closing-editorial-bg img{object-position:center center}
+  .closing-editorial-shade{background:linear-gradient(180deg,rgba(10,10,9,.72),rgba(10,10,9,.82))}
+  .closing-editorial-meta{top:24px;left:6vw;right:6vw;font-size:7px}
+  .closing-editorial-meta span:last-child{display:none}
+  .closing-editorial-inner{grid-template-columns:1fr;gap:48px;padding:110px 6vw 95px}
+  .closing-editorial-follow h2{font-size:18vw;margin-bottom:28px}
+  .closing-editorial-enquire{padding:48px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.25)}
+  .closing-editorial-enquire h3{font-size:19vw}
+  .closing-actions{margin-bottom:32px}
+  .closing-editorial-scroll{display:none}
+
+  .mobile-bar{display:grid;position:fixed;z-index:90;bottom:0;left:0;right:0;background:#171714;color:#fff;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.15);padding-bottom:env(safe-area-inset-bottom)}
+  .mobile-bar a{color:#fff;text-align:center;text-decoration:none;padding:15px 4px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.12)}
+  .mobile-bar a:last-child{border:0}
+}
+
+/* Small phones: only compact menu/header geometry is adjusted. */
+@media (max-width:430px){
+  .mobile-menu-trigger{min-height:38px;padding:8px 11px 8px 13px}
+  .mobile-nav-panel-inner{padding:86px 6vw 22px}
+  .mobile-nav a{min-height:55px;grid-template-columns:28px 1fr 16px}
+  .mobile-nav a strong{font-size:24px}
+  .mobile-nav-footer{display:grid;grid-template-columns:1fr 1fr}
+}
+
+/* Accessibility: preserve the reduced-motion behavior without mixing it into layout breakpoints. */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .gallery-track{animation:none}
+  .parallax-bg{transform:none!important}
+  .reveal{transition:none}
+  .wall-card img,.gallery-item img,.mosaic-grid img{transition:none}
 }

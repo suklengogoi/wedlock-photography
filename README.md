@@ -1,15 +1,19 @@
-# Wedlock Photography — V2.4
+# Wedlock Photography — V3
 
-Premium static wedding photography website for Wedlock Photography.
+Production polish pass for the premium editorial wedding photography site.
 
-## V2.4 focus
-- The **02 / Selected Stories** section is now a scroll-driven storytelling sequence.
-- One large photograph remains fixed while the visitor scrolls through five story chapters.
-- The photograph changes with a slow crossfade; there is no collage or multi-image wall in this section.
-- Homepage photo density remains restrained.
-- The moving horizontal photo strip is retained.
-- The separate Black & White section is retained.
-- Hero video is trimmed from the original source starting at **22 seconds**, for a 48-second autoplay loop.
+## V3 focus
+- Shorter scroll pacing on the major scroll-story chapters.
+- Same visual language and photography; no new sections added.
+- Tablet-specific breakpoint for 901–1100px widths.
+- Mobile spacing tightened while keeping photography-first presentation.
+- Hero and film video retained.
 
 ## Deployment
-Upload the contents of this folder to the GitHub Pages repository.
+Upload the contents of this folder to GitHub Pages.
+
+
+V4 responsive repair: mobile/tablet fixed-image story layering was rebuilt from the known-good V4 base. Desktop (>1100px) behavior is unchanged. Approach, Selected Stories, Experience, and Fixed Story now keep their visual layer present while copy scrolls over it on screens <=1100px. No viewport-fixed overlay or new JavaScript was added.
+
+
+V4: responsive CSS cleanup. Desktop layout is preserved; mobile/tablet rules are consolidated into intentional breakpoints.

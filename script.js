@@ -98,3 +98,31 @@ if(bwSteps.length && bwImages.length){
   }, {root:null, threshold:0.55});
   steps.forEach(step => observer.observe(step));
 })();
+
+
+// V3.7 — premium mobile/tablet dropdown navigation. Desktop navigation remains untouched.
+(() => {
+  const trigger = document.querySelector('.mobile-menu-trigger');
+  const panel = document.getElementById('mobile-nav-panel');
+  if (!trigger || !panel) return;
+
+  const closeMenu = () => {
+    trigger.setAttribute('aria-expanded', 'false');
+    panel.setAttribute('aria-hidden', 'true');
+    panel.classList.remove('is-open');
+    document.body.classList.remove('mobile-nav-open');
+  };
+  const openMenu = () => {
+    trigger.setAttribute('aria-expanded', 'true');
+    panel.setAttribute('aria-hidden', 'false');
+    panel.classList.add('is-open');
+    document.body.classList.add('mobile-nav-open');
+  };
+
+  trigger.addEventListener('click', () => {
+    trigger.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+  });
+  panel.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 1100) closeMenu(); }, {passive:true});
+})();

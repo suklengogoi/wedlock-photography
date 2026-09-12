@@ -1,21 +1,15 @@
 {
-  "version": "2.8",
-  "name": "Wedlock Photography Premium Website",
-  "homepage": "index.html",
-  "assets": {
-    "photos": 26,
-    "hero_video": "assets/video/hero.mp4",
-    "moving_photo_strip": true,
-    "additional_service_photos": 4
-  },
-  "design_updates": [
-    "removed reviews section",
-    "redesigned signature section as compact full-bleed editorial chapter",
-    "footer social and location icons made prominent",
-    "WhatsApp contact uses icon and phone number",
-    "preserved V2.7 original What We Create photograph"
+  "version":"3.0",
+  "name":"Wedlock Photography Premium Website",
+  "homepage":"index.html",
+  "assets":{"photos":31,"hero_video":"assets/video/hero.mp4","film_video":"assets/video/film.mp4","moving_photo_strip":true},
+  "design_updates":[
+    "production pacing polish with shorter desktop story chapters",
+    "reduced vertical drag without removing major visual chapters",
+    "production pacing calibrated for shorter desktop chapters",
+    "tablet-specific editorial breakpoint and spacing",
+    "mobile pacing refinement",
+    "preserved cinematic, full-bleed and scroll-driven visual language"
   ],
-  "deployment": "Static site; upload folder contents to GitHub Pages.",
-  "latest_update": "Section 05 redesigned as full-bleed fixed photograph with scrolling editorial text overlay",
-  "homepage_section_count": "11 numbered chapters including contact"
+  "deployment":"Static site; upload folder contents to GitHub Pages."
 }
