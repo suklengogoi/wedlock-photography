@@ -1,33 +1,40 @@
-/* Wedlock V4.2 — mobile navigation repair.
-   The dropdown now starts below the fixed header, so the MENU trigger remains
-   physically reachable while the navigation is open. */
+/* Wedlock V4.3 — definitive mobile navigation repair.
+   Keep the MENU trigger in its own top layer so it can always close the open panel. */
 @import url("https://raw.githubusercontent.com/suklengogoi/wedlock-photography/2ba98fc9736201c13bfbf3be618dfaedf4d27cc9/style.css");
 
 @media (max-width:1100px){
   .mobile-menu-trigger{
-    position:relative !important;
-    z-index:100 !important;
+    position:fixed !important;
+    top:21px !important;
+    right:5vw !important;
+    z-index:9999 !important;
     pointer-events:auto !important;
   }
 
   .mobile-nav-panel{
-    top:72px !important;
     z-index:90 !important;
-    max-height:calc(100svh - 72px) !important;
-    overflow:hidden !important;
-  }
-
-  .mobile-nav-panel-inner{
-    max-height:calc(100svh - 72px) !important;
   }
 }
 
 @media (max-width:900px){
-  .mobile-nav-panel{top:72px !important;}
-  .mobile-nav-panel-inner{padding-top:26px !important;max-height:calc(100svh - 72px) !important;}
+  .mobile-menu-trigger{
+    top:16px !important;
+    right:5vw !important;
+  }
+
+  .mobile-nav-panel{
+    top:0 !important;
+    max-height:100svh !important;
+  }
+
+  .mobile-nav-panel-inner{
+    max-height:100svh !important;
+  }
 }
 
 @media (max-width:430px){
-  .mobile-nav-panel{top:64px !important;max-height:calc(100svh - 64px) !important;}
-  .mobile-nav-panel-inner{max-height:calc(100svh - 64px) !important;}
+  .mobile-menu-trigger{
+    top:13px !important;
+    right:5vw !important;
+  }
 }
