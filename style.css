@@ -103,7 +103,7 @@
 /* V2.4 refinement — full-bleed editorial scroll experience */
 .experience-scroll{position:relative;display:block;min-height:500vh;background:#111;color:#fff;overflow:clip}
 .experience-scroll-visual{position:sticky;top:0;height:100vh;min-height:680px;overflow:hidden;background:#111;z-index:0}
-.experience-scroll-image{position:absolute;inset:0;background-image:url('assets/photos/wedlock-21.webp');background-size:cover;background-position:center center;transform:scale(1.01)}
+.experience-scroll-image{position:absolute;inset:0;background-image:url('assets/photos/wedlock-21.webp');background-size:cover;background-position:42% center;transform:scale(1.045)}
 /* Full photograph remains visible; only a soft tonal gradient supports text readability. */
 .experience-scroll-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.03) 0%,rgba(0,0,0,.05) 45%,rgba(0,0,0,.62) 100%),linear-gradient(0deg,rgba(0,0,0,.35),transparent 38%);pointer-events:none}
 .experience-scroll-meta{position:absolute;z-index:3;left:4vw;right:4vw;bottom:28px;display:flex;justify-content:space-between;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78)}
@@ -173,8 +173,8 @@
    becomes the fixed visual while the editorial story scrolls over it. */
 .approach-scroll{position:relative;display:block;min-height:400vh;background:#111;color:#fff;overflow:clip}
 .approach-scroll-visual{position:sticky;top:0;height:100vh;min-height:680px;overflow:hidden;background:#111;z-index:0}
-.approach-scroll-image{position:absolute;inset:0;background-image:url('assets/photos/approach-night-sky.webp');background-size:cover;background-position:center center;transform:scale(1.01)}
-.approach-scroll-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.12) 0%,rgba(0,0,0,.08) 48%,rgba(0,0,0,.66) 100%),linear-gradient(0deg,rgba(0,0,0,.46),transparent 40%);pointer-events:none}
+.approach-scroll-image{position:absolute;inset:0;background-image:url('assets/photos/approach-bride-field.webp');background-size:cover;background-position:42% center;transform:scale(1.045)}
+.approach-scroll-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.22) 45%,rgba(0,0,0,.42) 100%),linear-gradient(0deg,rgba(0,0,0,.52),rgba(0,0,0,.04) 48%,rgba(0,0,0,.12) 100%);pointer-events:none}
 .approach-scroll-meta{position:absolute;z-index:3;left:4vw;right:4vw;bottom:28px;display:flex;justify-content:space-between;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78)}
 .approach-scroll-copy{position:relative;z-index:2;margin-top:-100vh;padding:0 7vw 10vh 6vw;background:transparent;pointer-events:none}
 .approach-scroll-copy article{width:min(560px,43vw);margin-left:auto;min-height:100vh;padding:10vh 0;display:flex;flex-direction:column;justify-content:center;pointer-events:auto;border-bottom:1px solid rgba(255,255,255,.22);text-shadow:0 2px 24px rgba(0,0,0,.28)}
@@ -323,6 +323,10 @@
 
 /* Desktop-only pacing: final V3 desktop values, consolidated. */
 @media (min-width:1101px){
+  /* V4.4 — improve small editorial navigation text on desktop. */
+  .chapter-transition-inner{font-size:9.5px}
+  .stories-head .eyebrow{font-size:11px}
+  .stories-head .section-note{font-size:14px}
   .approach-scroll{min-height:220vh}
   .approach-scroll-copy{padding-bottom:5vh}
   .approach-scroll-copy article{min-height:55vh;padding:6vh 0}
@@ -351,7 +355,7 @@
 
   .approach-scroll{min-height:220vh;overflow:visible}
   .approach-scroll-visual{position:sticky;top:0;height:100svh;min-height:0;overflow:hidden;z-index:0}
-  .approach-scroll-image{background-position:34% center}
+  .approach-scroll-image{background-position:50% 52%}
   .approach-scroll-copy{position:relative;z-index:2;margin-top:-100svh;padding:0 5vw 8vh;background:transparent;pointer-events:none}
   .approach-scroll-copy article{width:100%;min-height:60vh;padding:7vh 0;background:transparent!important;pointer-events:auto}
   .approach-scroll-copy h2,.approach-scroll-copy h3{font-size:clamp(52px,6vw,78px)}
@@ -475,7 +479,7 @@
   /* Approach — one continuous photograph behind the full mobile story. */
   .approach-scroll{position:relative;min-height:220vh;overflow:visible;background:#111}
   .approach-scroll-visual{position:sticky;top:0;height:100svh;min-height:0;overflow:hidden;z-index:0;background:#111}
-  .approach-scroll-image{inset:0;background-size:cover;background-position:30% center;transform:scale(1.01)}
+  .approach-scroll-image{inset:0;background-size:cover;background-position:50% 52%;transform:scale(1.02)}
   .approach-scroll-copy{position:relative;z-index:2;margin-top:-100svh;padding:0 6vw 8vh;background:transparent;pointer-events:none}
   .approach-scroll-copy article{width:100%;min-height:55svh;padding:8vh 0;background:transparent!important;pointer-events:auto}
   .approach-scroll-copy h2,.approach-scroll-copy h3{font-size:14vw}
@@ -604,3 +608,17 @@
   .mobile-menu-trigger{position:relative;z-index:51;pointer-events:auto}
   .mobile-nav-panel{z-index:49}
 }
+/* V4.5 — stronger chapter markers on desktop; remove instructional story note.
+   Editorial references consistently use section labels as clear navigational anchors,
+   with display hierarchy carried by scale rather than tiny metadata. */
+@media (min-width:901px){
+  .chapter-transition-inner{font-size:14px;letter-spacing:.16em}
+  .stories-head .eyebrow,
+  .parallax-content .eyebrow.light,
+  .film-copy .eyebrow.light{font-size:14px;letter-spacing:.16em}
+  .approach-scroll-copy article>span,
+  .experience-scroll-copy article>span,
+  .fixed-story-label span:first-child,
+  .bw-story-meta span:first-child{font-size:13px;letter-spacing:.16em}
+}
+
